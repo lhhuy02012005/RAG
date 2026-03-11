@@ -1,0 +1,14 @@
+# Tránh đẩy database vector lên
+chroma/
+db/
+*.db
+
+# Tránh đẩy các file PDF tạm
+temp_*.pdf
+data.pdf
+
+# Môi trường ảo
+venv/
+__pycache__/
+.env
+uploads
