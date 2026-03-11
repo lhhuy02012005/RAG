@@ -142,9 +142,11 @@ class SmartRAGSystem:
 
         print(f"🔍 [RETRIEVAL] Đang tìm kiếm thông tin liên quan trong Database (k=5)...")
         
-        template = """Bạn là chuyên gia phân tích tài liệu.
-Sử dụng NGỮ CẢNH để trả lời CÂU HỎI một cách trung thực.
-Nếu không có thông tin, hãy nói: "Không tìm thấy thông tin trong tài liệu".
+        template = """Bạn là chuyên gia phân tích tài liệu và trợ lý thông tin đa năng.
+
+QUY TẮC:
+1. Nếu là file thì câu hỏi liên quan đến NGỮ CẢNH dưới đây, hãy ưu tiên sử dụng nó để trả lời chính xác.
+2. Nếu câu hỏi KHÔNG có trong NGỮ CẢNH (ví dụ hỏi về địa lý, xã hội chung), hãy sử dụng kiến thức sẵn có của bạn để trả lời người dùng một cách hữu ích.
 
 NGỮ CẢNH: {context}
 CÂU HỎI: {question}
