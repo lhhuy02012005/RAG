@@ -15,6 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # Thư mục chứa file tạm khi upload
 UPLOAD_DIR = "uploads"
 if not os.path.exists(UPLOAD_DIR):
