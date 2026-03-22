@@ -43,15 +43,26 @@ class RerankerService:
         self._initialized = True
 
     def _load_model_to_memory(self):
-        """Nạp model Reranker. CHÚ Ý: Bắt buộc dùng CPU để tránh Deadlock trên MPS."""
+        """Nạp model Reranker linh động theo cấu hình hệ thống."""
         logger.info(f"--- INITIALIZING SINGLETON RERANKER: {self.model_name} ---")
         
-        # M1 Pro chạy Rerank bằng CPU rất mượt (dưới 1s cho 10 đoạn văn)
-        # MPS có lỗi Meta Tensor với mô hình Cross-Encoder nên ta ép CPU.
-        device = "cpu"
+        # 1. Đọc cấu hình từ file settings (auto, cpu, cuda, mps)
+        device_config = getattr(settings, "NEXUSRAG_EMBEDDING_DEVICE", "auto").lower()
         
+        # 2. Logic tự động chọn thiết bị
+        if device_config == "cuda" or (device_config == "auto" and torch.cuda.is_available()):
+            device = "cuda"
+        elif device_config == "mps" or (device_config == "auto" and torch.backends.mps.is_available()):
+            device = "mps"
+            # Cảnh báo nhẹ cho người dùng Mac
+            logger.warning("⚠️ Đang chạy Reranker trên MPS. Nếu hệ thống bị treo (hang/deadlock), hãy đổi NEXUSRAG_EMBEDDING_DEVICE=cpu trong file .env")
+        else:
+            device = "cpu"
+        
+        # 3. Khởi tạo model
         instance = CrossEncoder(self.model_name, max_length=512, device=device)
         logger.info(f"Reranker model permanent stay on {device}: {self.model_name}")
+        
         return instance
 
     @torch.no_grad()
