@@ -1,0 +1,67 @@
+# =========================
+# Python & Bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# =========================
+# Virtual Environment
+# =========================
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# =========================
+# Database & Storage (CRITICAL)
+# =========================
+# Bỏ qua toàn bộ dữ liệu vector, graph và file tải lên
+data/
+uploads/
+*.sqlite3
+*.db
+*.graphml
+*.json
+
+# Ngoại trừ các thư mục rỗng cần giữ lại cấu trúc (nếu có)
+# !data/.gitkeep
+# !uploads/.gitkeep
+
+# =========================
+# Logs & Caches
+# =========================
+logs/
+*.log
+*.log.*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# IDE & OS Specific
+# =========================
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# =========================
+# LightRAG / ChromaDB Caches
+# =========================
+chroma_data/
+lightrag_cache/
