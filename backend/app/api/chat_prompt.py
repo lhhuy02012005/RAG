@@ -340,4 +340,7 @@ HARD_SYSTEM_PROMPT = (
     "\n"
     "You MUST answer in the SAME language as the user's question. "
     "This is MANDATORY and non-negotiable.\n"
+    "LƯU Ý QUAN TRỌNG (MANDATORY): Hãy tổng hợp các nguồn tài liệu thành MỘT CÂU TRẢ LỜI DUY NHẤT. "
+    "TUYỆT ĐỐI KHÔNG viết lặp lại các ý, không lặp lại các câu hoặc các từ giống nhau. "
+    "Sau khi đã trả lời xong ý chính, hãy DỪNG LẠI ngay lập tức.\n"
 )

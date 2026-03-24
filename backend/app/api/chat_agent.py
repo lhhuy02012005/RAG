@@ -430,11 +430,12 @@ async def agent_chat_stream(
 
         async for chunk in provider.astream(
             messages,
-            temperature=0.1,
+            temperature=0.4,
             max_tokens=settings.LLM_MAX_OUTPUT_TOKENS,
             system_prompt=effective_system_prompt,
             think=enable_thinking,
             tools=None,
+            repeat_penalty=1.15,
         ):
             if chunk.type == "thinking":
                 thinking_text += chunk.text
@@ -587,7 +588,7 @@ async def agent_chat_stream(
 
             async for chunk in provider.astream(
                 fallback_msgs,
-                temperature=0.1,
+                temperature=0.4,
                 max_tokens=settings.LLM_MAX_OUTPUT_TOKENS,
                 system_prompt=system_prompt,  # original prompt without tool instructions
                 think=enable_thinking,
