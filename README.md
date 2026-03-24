@@ -15,7 +15,6 @@ Mục tiêu: tải tài liệu nội bộ, đặt câu hỏi, nhận câu trả 
 File ảnh kiến trúc nằm tại:
 - `backend/docs/assets/nexusrag-architecture.svg`
 
-## Demo
 
 ![NexusRAG Demo](backend/docs/assets/demo.gif)
 
