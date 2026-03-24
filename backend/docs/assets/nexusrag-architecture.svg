@@ -115,8 +115,9 @@
 
   <line x1="1330" y1="560" x2="1460" y2="510" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
   <line x1="1330" y1="690" x2="1460" y2="730" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="1230" y1="824" x2="1460" y2="320" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <polyline points="1330,870 1410,870 1410,380 1460,320" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <line x1="905" y1="920" x2="360" y2="560" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="600" y="820" font-size="16" font-family="Verdana, Geneva, sans-serif" fill="#334155">streamed answer + citations</text>
+  <polyline points="905,920 905,965 430,965 430,620 360,560" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="620" y="938" rx="8" ry="8" width="220" height="30" fill="#ffffff" opacity="0.92"/>
+  <text x="730" y="958" text-anchor="middle" font-size="16" font-family="Verdana, Geneva, sans-serif" fill="#334155">streamed answer + citations</text>
 </svg>

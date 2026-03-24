@@ -365,7 +365,3 @@ RAGAI/
 	- Dùng model LLM lớn hơn
 
 ---
-
-Nếu bạn muốn, có thể tách README thành 2 tài liệu riêng:
-- `README-user.md` (dành cho người dùng cuối)
-- `README-dev.md` (dành cho kỹ sư vận hành/tuning)
