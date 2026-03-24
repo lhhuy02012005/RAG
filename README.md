@@ -15,10 +15,6 @@ Mục tiêu: tải tài liệu nội bộ, đặt câu hỏi, nhận câu trả 
 File ảnh kiến trúc nằm tại:
 - `backend/docs/assets/nexusrag-architecture.svg`
 
-
-![NexusRAG Demo](backend/docs/assets/demo.gif)
-
-
 ## 2. Luồng hoạt động chuẩn hóa của hệ thống
 
 ### Giai đoạn A - Upload và tiền xử lý
